@@ -15,6 +15,7 @@
 		3AE4256F1C4691E700A72B53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AE4256D1C4691E700A72B53 /* LaunchScreen.storyboard */; };
 		3AE4257A1C4691E700A72B53 /* NeteaseNewsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AE425791C4691E700A72B53 /* NeteaseNewsTests.m */; };
 		3AE425851C4691E700A72B53 /* NeteaseNewsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AE425841C4691E700A72B53 /* NeteaseNewsUITests.m */; };
+		AC8A40D1AEE52954E8BE2DEA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A62A13E1B1832AB13D391B /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,9 @@
 		3AE425801C4691E700A72B53 /* NeteaseNewsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NeteaseNewsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AE425841C4691E700A72B53 /* NeteaseNewsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NeteaseNewsUITests.m; sourceTree = "<group>"; };
 		3AE425861C4691E700A72B53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82A62A13E1B1832AB13D391B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9D4A3D0C70E5279D2CE4E6B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		F4C98D56145BF14D4CFDEB39 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC8A40D1AEE52954E8BE2DEA /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +90,8 @@
 				3AE425781C4691E700A72B53 /* NeteaseNewsTests */,
 				3AE425831C4691E700A72B53 /* NeteaseNewsUITests */,
 				3AE4255D1C4691E700A72B53 /* Products */,
+				6626B8FF43183C17CB91D6A0 /* Frameworks */,
+				42207416C1B9C086604458C6 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,6 +147,23 @@
 			path = NeteaseNewsUITests;
 			sourceTree = "<group>";
 		};
+		42207416C1B9C086604458C6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D9D4A3D0C70E5279D2CE4E6B /* Pods.debug.xcconfig */,
+				F4C98D56145BF14D4CFDEB39 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6626B8FF43183C17CB91D6A0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				82A62A13E1B1832AB13D391B /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +171,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3AE425891C4691E700A72B53 /* Build configuration list for PBXNativeTarget "NeteaseNews" */;
 			buildPhases = (
+				5E7DEA84EBED639CF4658E48 /* Check Pods Manifest.lock */,
 				3AE425581C4691E700A72B53 /* Sources */,
 				3AE425591C4691E700A72B53 /* Frameworks */,
 				3AE4255A1C4691E700A72B53 /* Resources */,
+				47C7A5D12D062F7BC2148369 /* Embed Pods Frameworks */,
+				1749BB5B763299C81725148D /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -264,6 +291,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1749BB5B763299C81725148D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		47C7A5D12D062F7BC2148369 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5E7DEA84EBED639CF4658E48 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3AE425581C4691E700A72B53 /* Sources */ = {
@@ -411,6 +486,7 @@
 		};
 		3AE4258A1C4691E700A72B53 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9D4A3D0C70E5279D2CE4E6B /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = NeteaseNews/Info.plist;
@@ -422,6 +498,7 @@
 		};
 		3AE4258B1C4691E700A72B53 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F4C98D56145BF14D4CFDEB39 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = NeteaseNews/Info.plist;
@@ -498,6 +575,7 @@
 				3AE4258B1C4691E700A72B53 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3AE4258C1C4691E700A72B53 /* Build configuration list for PBXNativeTarget "NeteaseNewsTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +584,7 @@
 				3AE4258E1C4691E700A72B53 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3AE4258F1C4691E700A72B53 /* Build configuration list for PBXNativeTarget "NeteaseNewsUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +593,7 @@
 				3AE425911C4691E700A72B53 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
